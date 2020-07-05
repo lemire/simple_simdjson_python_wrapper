@@ -11,4 +11,4 @@ python setup.py install
 
 For macos, preface the build step with `ARCHFLAGS=""`.
 
-The run `python test.py`.
+The run a test: `python test.py`.
