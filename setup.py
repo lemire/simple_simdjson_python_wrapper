@@ -8,7 +8,7 @@ PLATFORM_MACOSX = (platform.system() == 'Darwin')
 
 from setuptools import setup, Extension
 if PLATFORM_WINDOWS:
-    cpp_args = ["/O2", "/Ob3"]
+    cpp_args = ["/Ob0", "/d2inlinestats"]
 elif PLATFORM_MACOSX:
     cpp_args=["-stdlib=libc++", "-mmacosx-version-min=10.9",'-std=c++11']
 else:
