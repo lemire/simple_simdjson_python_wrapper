@@ -1,9 +1,11 @@
 
 
 
-In a bash shell, trying the following:
+In a shell, trying the following:
 
 ```
-./build.sh
-./run.sh
+python setup.py build
 ```
+
+
+For macos 
