@@ -12,6 +12,7 @@ if PLATFORM_WINDOWS:
     link_args=[]
 elif PLATFORM_MACOSX:
     cpp_args=["-stdlib=libc++", "-mmacosx-version-min=10.9",'-std=c++11']
+    link_args=['-stdlib=libc++', "-mmacosx-version-min=10.9",]
 else:
     cpp_args = ['-std=c++11']
 
