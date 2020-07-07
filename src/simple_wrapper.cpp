@@ -8,7 +8,6 @@ simdjson::padded_string docdata;
 bool load_file(const char *filename) {
   auto error = simdjson::padded_string::load(filename).get(docdata);
   if (error) {
-    std::cerr << "could not load " << filename << ":" << error << std::endl;
     return false;
   }
   return true;
@@ -30,7 +29,6 @@ bool load_and_check_if_valid_simdjson(const char *filename) {
   simdjson::padded_string docdata;
   auto error = simdjson::padded_string::load(filename).get(docdata);
   if (error) {
-    std::cerr << "could not parse " << filename << ":" << error << std::endl;
     return false;
   }
   simdjson::dom::element doc;

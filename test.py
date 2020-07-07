@@ -9,14 +9,16 @@ volume = os.path.getsize(myfile)
 
 simdjson_demo.load_file(myfile)
 print(simdjson_demo.is_ok())
-repeat = 100
+repeat = 8000
 
 print("volume = "+str(volume)+"B")
 
-gb = volume / 1000000000.
+for i in range(3):
+  print("trial "+str(i+1)+":")
+  gb = volume / 1000000000.
 
-times = timeit.timeit(simdjson_demo.is_ok, number=repeat) / repeat
+  times = timeit.timeit(simdjson_demo.is_ok, number=repeat) / repeat
 
-print("time to parse "+ str(times)+ " s")
+  print("time to parse "+ str(times)+ " s")
 
-print(gb/times)
+  print(str(gb/times)+" GB/s")
