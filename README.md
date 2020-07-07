@@ -13,6 +13,8 @@ For macos, preface the build step with `ARCHFLAGS=""`.
 
 The run a test: `python test.py`.
 
+Here an example of a result using the Visual Studio compiler.
+
 ```
 $ python test.py
 True
